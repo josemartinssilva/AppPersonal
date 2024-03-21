@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1>Gerenciador de Login</h1>
+        <h3>Nessa tela, você pode realizar seu Login de acesso.</h3>
+    </header>
+    <main id="conteudo">
+        <section class="primeiroFormulario">
+            <form action="" method="" class="boxForm">
+                <label>Digite seu E-mail:</label>
+                <input type="email" name="email" placeholder="Digite seu E-mail aqui..." class="campForm">
+                <label>Digite sua Senha:</label>
+                <input type="password" name="senha" placeholder="Digite sua Senha aqui..." class="campForm">
+                <button name="btnAcessar" class="btnAcessar">Acessar</button>
+            </form>
+        </section>
+    </main>
+    <footer id="rodape">
+        <section class="end">
+            <p>Todos os direitos reservados - 2024</p>
+        </section>
+    </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDe6aJV2B27jgniagOXcrnVzHwdXzTzjh8",
+        authDomain: "unicesumar-npd-app-personal.firebaseapp.com",
+        projectId: "unicesumar-npd-app-personal",
+        storageBucket: "unicesumar-npd-app-personal.appspot.com",
+        messagingSenderId: "454306493890",
+        appId: "1:454306493890:web:2f8f335711b263bf28d25b"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    console.log('antes');
+    firebase.auth().signInWithEmailAndPassword("josemds76@gmail.com", "giovanna02072013").then(response => { console.log('Error', Error)  });
+    console.log('depois');
+</script>
+
+
+
+</html>
